@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Briar-Rose-Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container source-code-pro-regular" id="content">
+        <div class="row">
+            <div class="col-lg-5 animate__animated animate__backInDown" id="main-box">
+                <img onclick="changeSmiley()" src='img/briar-joy-logo-white.svg' alt="Joy Logo" class="box joy-logo-show" id="smile">
+                <div onclick="creditsChange()" class="row" id="credits">
+                    <div class="credits-yellow" class="col" id="credits-text"><span id="credit"><strong>//</strong>A portfolio by Briar Rose</span></div>
+                </div>
+            </div>
+            <div class="col-lg-7" id="starting-text">
+                <div class="row">
+                    <div class="col-1 animate__animated animate__backInDown" id="code-button" onclick="showCodeModal()"><svg class="triangle" id="yellow-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></div>
+                    <div class="col-11 animate__animated animate__zoomInDown yellow" id="code-delay"><strong class="yellow-text">//</strong>Code.</div>
+                    </div>
+                <div class="row">
+                    <div class="col-1 animate__animated animate__backInDown" id="ux-button" onclick="showUXModal()"><svg class="triangle" id="cyan-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></div>
+                    <div class="col-11 animate__animated animate__zoomInDown cyan" id="ux-delay"><strong class="cyan-text">//</strong>User Experience.</div>
+                </div>
+                <div class="row">
+                    <div class="col-1 animate__animated animate__backInDown" id="gd-button" onclick="showGDModal()"><svg class="triangle" id="pink-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></div>
+                    <div class="col-11 animate__animated animate__zoomInDown pink" id="graphic-design-delay"><strong class="pink-text">//</strong>Graphic Design.</div>
+                </div>
+                <div class="row">
+                    <div class="col-1 animate__animated animate__backInDown" id="links-button" onclick="showLinksModal()"><svg class="triangle" id="white-triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></div>
+                    <div class="col-11 animate__animated animate__zoomInDown" id="links-delay"><strong>//</strong><span>Links.</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="source-code-pro-regular">
+        <div class="modal-thingy" id="code-mdl">
+            <div class="modal-box">
+               <span onclick='closeCodeModal()' id="code-close" class="close">&times;</span>
+               <span class="mdl-text"><strong class="yellow-text">//</strong>Illuminating ideas through the artistry of HTML, CSS, and JavaScript.<br><a id="code-learn"><strong class="yellow-text">//</strong>Learn More</a></span>
+            </div>
+            <div class="modal-thingy" id="ux-mdl">
+                <div class="modal-box">
+                   <span onclick='closeUXModal()' id="ux-close" class="close">&times;</span>
+                   <span class="mdl-text"><strong class="cyan-text">//</strong>Sculpting real empathy through digital user experiences.<br><a id="ux-learn"><strong class="cyan-text">//</strong>Learn More</a></span>
+                </div>
+                <div class="modal-thingy" id="gd-mdl">
+                    <div class="modal-box">
+                       <span onclick='closeGDModal()' id="gd-close" class="close">&times;</span>
+                       <span class="mdl-text"><strong class="pink-text">//</strong>Designing happiness, one pixel (or anchor point) at a time.<br><a id="graphic-design-learn"><strong class="pink-text">//</strong>Learn More</a></span>
+                    </div>
+                    <div class="modal-thingy" id="links-mdl">
+                        <div class="modal-box">
+                           <span onclick='closeLinksModal()' id="links-close" class="close">&times;</span>
+                           <span class="mdl-text"><a href="https://github.com/Briar-M-Rose/" id="github-link"><strong class="yellow-text">//</strong>Github</a><br><a href="https://www.linkedin.com/in/briarmrose/" id="linkedin-link"><strong class="cyan-text">//</strong>LinkedIn</a><br><a id="blinq-link"><strong class="pink-text">//</strong>Blinq</a></span>
+                        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/b75158ab22.js" crossorigin="anonymous"></script>
+    <script src="scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
